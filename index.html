@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- main parent div starts-->
+    <div class="flex font-['Times_New_Roman']">
+      <!-- sidebar starts -->
+      <div
+        class="flex flex-col w-1/5 h-dvh bg-[#FFFFFF] p-8 justify-between"
+        id="side-bar"
+      >
+        <!-- sidebar header starts -->
+        <div class="flex flex-col gap-6" id="sidebar-header">
+          <!-- logo conatiner starts -->
+          <div class="flex items-center justify-between" id="logo-container">
+            <img class="h-6" src="./assets/neptune-logo.png" alt="Neptune" />
+            <!-- <img
+              class="h-4"
+              src="./assets/left-arrow-svgrepo-com.svg"
+              alt=".."
+            /> -->
+          </div>
+          <!-- logo container ends -->
+
+          <!-- profile section starts -->
+          <div
+            class="flex border-1 border-[#b5bdcd] rounded-md items-center p-2 gap-2"
+            id="profile-section"
+          >
+            <div id="profile-img">
+              <img class="w-8" src="./assets/dropdown-image.png" alt=".." />
+            </div>
+            <div class="flex flex-col grow" id="profile-detail">
+              <h4 class="text-md font-extrabold">Jessica Thompson</h4>
+              <p class="text-xs">Primary User</p>
+            </div>
+            <div id="profile-dropdown">
+              <img src="./assets/Icon Right.svg" alt=".." />
+            </div>
+          </div>
+          <!-- profile section ends -->
+
+          <!-- sidebar menu start -->
+          <div class="flex flex-col text-[#626d82] gap-1.5" id="sidebar-menu">
+            <div
+              class="flex border-0 rounded-sm p-3 items-center gap-3"
+              id="home-option"
+            >
+              <img src="./assets/home 1.svg" alt="Home" />
+              <a class="text-md" href="#">Home</a>
+            </div>
+            <div
+              class="flex border-0 rounded-sm p-3 items-center gap-3 text-[#1f4451] bg-[#d3f7b5]"
+              id="document-option"
+            >
+              <img src="./assets/file-text 1.svg" alt="Document" />
+              <a class="text-md" href="#">Document</a>
+            </div>
+            <div
+              class="flex border-0 rounded-sm p-3 items-center gap-3"
+              id="chat-option"
+            >
+              <img src="./assets/message-circle 1.svg" alt="Chat" />
+              <a class="text-md" href="#">Chat with Neptune</a>
+            </div>
+            <div
+              class="flex border-0 rounded-sm p-3 items-center gap-3"
+              id="help-option"
+            >
+              <img src="./assets/help-circle 1.svg" alt="Help" />
+              <a class="text-md" href="#">Help</a>
+            </div>
+            <div
+              class="flex border-0 rounded-sm p-3 items-center gap-3"
+              id="setting-option"
+            >
+              <img src="./assets/settings 1.svg" alt="Setting" />
+              <a class="text-md" href="#">Setting</a>
+            </div>
+          </div>
+          <!-- sidebar menu ends -->
+        </div>
+        <!-- sidebar header ends -->
+
+        <!-- sidebar footer starts -->
+        <div class="flex flex-col gap-5" id="sidebar-footer">
+          <div id="call-icon">
+            <img class="h-8 w-8" src="./assets/phone 1.svg" alt="Phone" />
+          </div>
+          <div class="flex flex-col gap-2" id="trouble-section">
+            <h3 class="text-xl text-[#1f4451] font-bold">Having Trouble?</h3>
+            <p class="text-md text-[#626d82]">
+              Feel free to contact us and we will always help you through the
+              process.
+            </p>
+          </div>
+          <div id="contact-us-button-section">
+            <button
+              class="bg-[#1f4451] text-sm text-white pt-2.5 pb-2.5 p-5 border-0 rounded-md"
+              id="contact-us-button"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+        <!-- sidebar footer ends -->
+      </div>
+      <!-- sidebar ends -->
+
+      <!-- main container starts -->
+      <div
+        class="w-4/5 flex flex-col bg-[#EBEBEB] pt-7 pb-7 p-20 gap-10"
+        id="main-container"
+      >
+        <!-- navigation indicator starts -->
+        <div class="flex gap-3" id="navigation-indicator">
+          <h4 class="text-[#436D7C]">Home</h4>
+          <img src="./assets/chevron-right.svg" alt="..." />
+          <h4 class="text-[#B5BDCD]">Documents</h4>
+        </div>
+        <!-- navigation indicator ends -->
+
+        <!-- title section starts -->
+        <div class="flex justify-between" id="title-section">
+          <h1 class="text-5xl">My Documents</h1>
+          <div class="flex items-center justify-end" id="search-feild">
+            <input
+              class="bg-white h-full w-75 border text-[#B5BDCD] border-[#B5BDCD] p-3 rounded-sm relative"
+              type="text"
+              placeholder="Search Documents"
+            />
+            <div class="absolute p-3" id="search-button">
+              <img src="./assets/Layer_1.svg" alt="..." />
+            </div>
+          </div>
+        </div>
+        <!-- title section ends -->
+
+        <!-- content table starts -->
+        <div
+          id="content-table"
+          class="overflow-hidden rounded-md border border-[#B5BDCD]"
+        >
+          <!-- table starts -->
+          <table class="table-auto w-full bg-white border-collapse">
+            <!-- Table Heading Starts -->
+            <thead>
+              <tr class="h-10 border-b-2 border-[#E8ECF1]">
+                <th class="py-4">
+                  <div class="flex justify-end items-center space-x-1">
+                    <input type="checkbox" />
+                    <img src="./assets/Icon Right.svg" alt="" />
+                  </div>
+                </th>
+                <th class="text-start px-4 py-4">Document Name</th>
+                <th class="text-start px-4 py-4">Status</th>
+                <th class="text-start px-4 py-4">Last Modified</th>
+              </tr>
+            </thead>
+            <!-- Table Heading Ends -->
+
+            <!-- Table Data Starts -->
+            <tbody>
+              <tr class="h-10 border-b-2 border-[#E8ECF1]">
+                <td class="py-5 text-center">
+                  <input type="checkbox" />
+                </td>
+                <td class="px-4 py-5 text-[#436D7C]">
+                  Title of Document Goes Here
+                </td>
+                <td class="px-4 py-5">
+                  <div
+                    class="bg-[#436D7C] inline px-4 py-1 text-white rounded-3xl text-md"
+                  >
+                    Needs Signing
+                  </div>
+                </td>
+                <td class="px-4 py-5 text-[#626D82]">
+                  <div class="flex flex-col">
+                    <time datetime="2024-10-22">10/22/2024</time>
+                    <time datetime="14:01">2:01 pm</time>
+                  </div>
+                </td>
+                <td class="px-4 py-5">
+                  <button
+                    class="border border-[#B5BDCD] rounded-sm text-[#626D82] w-full h-10"
+                  >
+                    Sign Now
+                  </button>
+                </td>
+                <td class="w-15 px-2 py-3 text-center">
+                  <img
+                    src="./assets/more_vert.svg"
+                    alt=""
+                    class="w-6 h-6 mx-auto"
+                  />
+                </td>
+              </tr>
+              <tr class="h-10 border-b-2 border-[#E8ECF1]">
+                <td class="py-5 text-center">
+                  <input type="checkbox" />
+                </td>
+                <td class="px-4 py-5 text-[#436D7C]">
+                  Title of Document Goes Here
+                </td>
+                <td class="px-4 py-5">
+                  <div
+                    class="bg-[#E8ECF1] inline px-4 py-1 text-[#626D82] rounded-3xl text-md"
+                  >
+                    Pending
+                  </div>
+                  <div class="flex gap-1 italic pt-1">
+                    <p class="text-[#B5BDCD]">Waiting for</p>
+                    <p class="text-[#436D7C]">1 person</p>
+                  </div>
+                </td>
+                <td class="px-4 py-5 text-[#626D82]">
+                  <div class="flex flex-col">
+                    <time datetime="2024-10-22">10/22/2024</time>
+                    <time datetime="14:01">2:01 pm</time>
+                  </div>
+                </td>
+                <td class="px-4 py-5">
+                  <button
+                    class="border border-[#B5BDCD] rounded-sm text-[#626D82] w-full h-10"
+                  >
+                    Preview
+                  </button>
+                </td>
+                <td class="w-15 px-2 py-3 text-center">
+                  <img
+                    src="./assets/more_vert.svg"
+                    alt=""
+                    class="w-6 h-6 mx-auto"
+                  />
+                </td>
+              </tr>
+              <tr class="h-10 border-b-2 border-[#E8ECF1]">
+                <td class="py-5 text-center">
+                  <input type="checkbox" />
+                </td>
+                <td class="px-4 py-5 text-[#436D7C]">
+                  Title of Document Goes Here
+                </td>
+                <td class="px-4 py-5">
+                  <div
+                    class="bg-[#E8ECF1] inline px-4 py-1 text-[#626D82] rounded-3xl text-md"
+                  >
+                    Pending
+                  </div>
+                  <div class="flex gap-1 italic pt-1">
+                    <p class="text-[#B5BDCD]">Waiting for</p>
+                    <p class="text-[#436D7C]">2 people</p>
+                  </div>
+                </td>
+                <td class="px-4 py-5 text-[#626D82]">
+                  <div class="flex flex-col">
+                    <time datetime="2024-10-22">10/22/2024</time>
+                    <time datetime="14:01">2:01 pm</time>
+                  </div>
+                </td>
+                <td class="px-4 py-5">
+                  <button
+                    class="border border-[#B5BDCD] rounded-sm text-[#626D82] w-full h-10"
+                  >
+                    Preview
+                  </button>
+                </td>
+                <td class="w-15 px-2 py-3 text-center">
+                  <img
+                    src="./assets/more_vert.svg"
+                    alt=""
+                    class="w-6 h-6 mx-auto"
+                  />
+                </td>
+              </tr>
+              <tr class="h-10 border-b-2 border-[#E8ECF1]">
+                <td class="py-5 text-center">
+                  <input type="checkbox" />
+                </td>
+                <td class="px-4 py-5 text-[#436D7C]">
+                  Title of Document Goes Here
+                </td>
+                <td class="px-4 py-5">
+                  <div
+                    class="bg-[#D3F7B5] inline px-4 py-1 text-[#1F4451] rounded-3xl text-md"
+                  >
+                    Completed
+                  </div>
+                </td>
+                <td class="px-4 py-5 text-[#626D82]">
+                  <div class="flex flex-col">
+                    <time datetime="2024-10-22">10/22/2024</time>
+                    <time datetime="14:01">2:01 pm</time>
+                  </div>
+                </td>
+                <td class="px-4 py-5">
+                  <button
+                    class="border border-[#B5BDCD] rounded-sm text-[#626D82] w-full h-10"
+                  >
+                    Download PDF
+                  </button>
+                </td>
+                <td class="w-15 px-2 py-3 text-center">
+                  <img
+                    src="./assets/more_vert.svg"
+                    alt=""
+                    class="w-6 h-6 mx-auto"
+                  />
+                </td>
+              </tr>
+              <tr class="h-10 border-b-2 border-[#E8ECF1]">
+                <td class="py-5 text-center">
+                  <input type="checkbox" />
+                </td>
+                <td class="px-4 py-5 text-[#436D7C]">
+                  Title of Document Goes Here
+                </td>
+                <td class="px-4 py-5">
+                  <div
+                    class="bg-[#D3F7B5] inline px-4 py-1 text-[#1F4451] rounded-3xl text-md"
+                  >
+                    Completed
+                  </div>
+                </td>
+                <td class="px-4 py-5 text-[#626D82]">
+                  <div class="flex flex-col">
+                    <time datetime="2024-10-22">10/22/2024</time>
+                    <time datetime="14:01">2:01 pm</time>
+                  </div>
+                </td>
+                <td class="px-4 py-5">
+                  <button
+                    class="border border-[#B5BDCD] rounded-sm text-[#626D82] w-full h-10"
+                  >
+                    Download PDF
+                  </button>
+                </td>
+                <td class="w-15 px-2 py-3 text-center">
+                  <img
+                    src="./assets/more_vert.svg"
+                    alt=""
+                    class="w-6 h-6 mx-auto"
+                  />
+                </td>
+              </tr>
+              <tr class="h-10">
+                <td class="py-5 text-center">
+                  <input type="checkbox" />
+                </td>
+                <td class="px-4 py-5 text-[#436D7C]">
+                  Title of Document Goes Here
+                </td>
+                <td class="px-4 py-5">
+                  <div
+                    class="bg-[#D3F7B5] inline px-4 py-1 text-[#1F4451] rounded-3xl text-md"
+                  >
+                    Completed
+                  </div>
+                </td>
+                <td class="px-4 py-5 text-[#626D82]">
+                  <div class="flex flex-col">
+                    <time datetime="2024-10-22">10/22/2024</time>
+                    <time datetime="14:01">2:01 pm</time>
+                  </div>
+                </td>
+                <td class="px-4 py-5">
+                  <button
+                    class="border border-[#B5BDCD] rounded-sm text-[#626D82] w-full h-10"
+                  >
+                    Download PDF
+                  </button>
+                </td>
+                <td class="w-15 px-2 py-3 text-center">
+                  <img
+                    src="./assets/more_vert.svg"
+                    alt=""
+                    class="w-6 h-6 mx-auto"
+                  />
+                </td>
+              </tr>
+            </tbody>
+            <!-- Table Data Ends -->
+          </table>
+
+          <!-- table ends -->
+        </div>
+
+        <!-- content table ends -->
+      </div>
+      <!-- main conatiner ends -->
+    </div>
+    <!-- main parent div ends -->
+    <script src="./source.js"></script>
+  </body>
+</html>
